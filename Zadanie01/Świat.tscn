@@ -1,0 +1,235 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://FF.tscn" type="PackedScene" id=1]
+[ext_resource path="res://ziemia.png" type="Texture" id=2]
+
+[sub_resource type="RectangleShape2D" id=1]
+extents = Vector2( 25.0978, 16.9362 )
+
+[node name="Świat" type="Node"]
+
+[node name="FF" parent="." instance=ExtResource( 1 )]
+position = Vector2( 390.958, 794.724 )
+
+[node name="Podłoże" type="Node" parent="."]
+
+[node name="Ziemia" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 390.958, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia"]
+shape = SubResource( 1 )
+
+[node name="Ziemia10" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 341.352, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia10"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia10"]
+shape = SubResource( 1 )
+
+[node name="Ziemia11" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 291.746, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia11"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia11"]
+shape = SubResource( 1 )
+
+[node name="Ziemia12" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 242.139, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia12"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia12"]
+shape = SubResource( 1 )
+
+[node name="Ziemia13" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 192.93, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia13"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia13"]
+shape = SubResource( 1 )
+
+[node name="Ziemia14" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 142.927, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia14"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia14"]
+shape = SubResource( 1 )
+
+[node name="Ziemia15" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 93.7175, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia15"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia15"]
+shape = SubResource( 1 )
+
+[node name="Ziemia16" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 44.5081, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia16"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia16"]
+shape = SubResource( 1 )
+
+[node name="Ziemia17" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 25.0624, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia17"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia17"]
+shape = SubResource( 1 )
+
+[node name="Ziemia2" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 440.565, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia2"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia2"]
+shape = SubResource( 1 )
+
+[node name="Ziemia3" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 490.568, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia3"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia3"]
+shape = SubResource( 1 )
+
+[node name="Ziemia4" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 540.174, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia4"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia4"]
+shape = SubResource( 1 )
+
+[node name="Ziemia5" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 589.78, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia5"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia5"]
+shape = SubResource( 1 )
+
+[node name="Ziemia6" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 639.783, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia6"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia6"]
+shape = SubResource( 1 )
+
+[node name="Ziemia7" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 689.39, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia7"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia7"]
+shape = SubResource( 1 )
+
+[node name="Ziemia8" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 738.996, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia8"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia8"]
+shape = SubResource( 1 )
+
+[node name="Ziemia9" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 775.109, 892.281 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia9"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia9"]
+shape = SubResource( 1 )
