@@ -2,8 +2,8 @@ extends KinematicBody2D
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
-const SPEED = 200
-const JUMP_HEIGHT = -500
+const SPEED = 300
+const JUMP_HEIGHT = -600
 var motion = Vector2()
 
 func _physics_process(delta):
@@ -11,9 +11,14 @@ func _physics_process(delta):
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
+		$AnimatedSprite.flip_h = true
+		$AnimatedSprite.play("walk")
 	elif Input.is_action_pressed("ui_left"):
 		motion.x = -SPEED
+		$AnimatedSprite.flip_h = false
+		$AnimatedSprite.play("walk")
 	else:
+		$AnimatedSprite.play("stand")
 		motion.x = 0
 	
 	if is_on_floor():
