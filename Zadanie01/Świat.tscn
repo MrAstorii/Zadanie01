@@ -1,11 +1,29 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://FF.tscn" type="PackedScene" id=1]
 [ext_resource path="res://ziemia.png" type="Texture" id=2]
 [ext_resource path="res://Tło.jpg" type="Texture" id=3]
+[ext_resource path="res://NC.tscn" type="PackedScene" id=4]
+[ext_resource path="res://GP shot.png" type="Texture" id=5]
+[ext_resource path="res://GP stand.png" type="Texture" id=6]
+[ext_resource path="res://GP.gd" type="Script" id=7]
+[ext_resource path="res://Nabój.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Franz Ferdinand - Take Me Out (Official Video) (online-audio-converter.com).wav" type="AudioStream" id=10]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 25.0978, 16.9362 )
+
+[sub_resource type="SpriteFrames" id=2]
+animations = [ {
+"frames": [ ExtResource( 5 ), ExtResource( 6 ) ],
+"loop": true,
+"name": "default",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=3]
+radius = 14.538
+height = 88.5866
 
 [node name="Świat" type="Node"]
 
@@ -19,9 +37,6 @@ stretch_mode = 1
 __meta__ = {
 "_edit_use_anchors_": false
 }
-
-[node name="FF" parent="." instance=ExtResource( 1 )]
-position = Vector2( 390.958, 794.724 )
 
 [node name="Podłoże" type="Node" parent="."]
 
@@ -142,6 +157,34 @@ texture = ExtResource( 2 )
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia17"]
 shape = SubResource( 1 )
 
+[node name="Ziemia18" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 50.0624, 164.295 )
+scale = Vector2( 2, 0.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia18"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia18"]
+shape = SubResource( 1 )
+
+[node name="Ziemia19" type="StaticBody2D" parent="Podłoże"]
+position = Vector2( 750.109, 164.295 )
+scale = Vector2( 2, 0.3 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="Sprite" type="Sprite" parent="Podłoże/Ziemia19"]
+scale = Vector2( 0.1, 0.1 )
+texture = ExtResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia19"]
+shape = SubResource( 1 )
+
 [node name="Ziemia2" type="StaticBody2D" parent="Podłoże"]
 position = Vector2( 440.565, 892.281 )
 __meta__ = {
@@ -245,3 +288,42 @@ texture = ExtResource( 2 )
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Podłoże/Ziemia9"]
 shape = SubResource( 1 )
+
+[node name="FF" parent="." instance=ExtResource( 1 )]
+position = Vector2( 390.958, 803.129 )
+collision_mask = 2147483657
+
+[node name="NC" parent="." instance=ExtResource( 4 )]
+position = Vector2( 69.5081, 93.6567 )
+collision_layer = 1
+
+[node name="GP" type="KinematicBody2D" parent="."]
+position = Vector2( 744.95, 93.6567 )
+script = ExtResource( 7 )
+naboj_angle = 200.0
+naboj_delay = 0.2
+bullet_scene = ExtResource( 8 )
+naboj_spawn_path = NodePath("Position2D")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="GP"]
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 2 )
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="GP"]
+position = Vector2( 2, 7 )
+rotation = 3.14159
+shape = SubResource( 3 )
+
+[node name="Position2D" type="Position2D" parent="GP"]
+position = Vector2( -23.3182, 7.93698 )
+
+[node name="Muzyka" type="AudioStreamPlayer2D" parent="."]
+stream = ExtResource( 10 )
+
+[node name="StartTimer" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
+[node name="StartPosition" type="Position2D" parent="."]
+position = Vector2( 390.958, 803.129 )
