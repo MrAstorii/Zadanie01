@@ -308,6 +308,7 @@ naboj_spawn_path = NodePath("Position2D")
 [node name="AnimatedSprite" type="AnimatedSprite" parent="GP"]
 scale = Vector2( 0.6, 0.6 )
 frames = SubResource( 2 )
+frame = 1
 playing = true
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="GP"]
@@ -320,6 +321,7 @@ position = Vector2( -23.3182, 7.93698 )
 
 [node name="Muzyka" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource( 10 )
+autoplay = true
 
 [node name="StartTimer" type="Timer" parent="."]
 wait_time = 2.0
