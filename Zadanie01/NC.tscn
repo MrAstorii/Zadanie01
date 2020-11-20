@@ -1,0 +1,41 @@
+[gd_scene load_steps=7 format=2]
+
+[ext_resource path="res://NC stand2.png" type="Texture" id=1]
+[ext_resource path="res://NC stand1.png" type="Texture" id=2]
+[ext_resource path="res://NC.gd" type="Script" id=3]
+[ext_resource path="res://Granat.tscn" type="PackedScene" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"loop": true,
+"name": "rzut",
+"speed": 5.0
+} ]
+
+[sub_resource type="CapsuleShape2D" id=2]
+radius = 23.0
+height = 66.811
+
+[node name="NC" type="KinematicBody2D"]
+collision_layer = 2147483649
+script = ExtResource( 3 )
+granat_delay = 2.0
+bullet_scene = ExtResource( 4 )
+granat_spawn_path = NodePath("granat_spawn")
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+scale = Vector2( 0.6, 0.6 )
+frames = SubResource( 1 )
+animation = "rzut"
+frame = 1
+playing = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2( 1, 9 )
+rotation = -3.14159
+shape = SubResource( 2 )
+
+[node name="granat_spawn" type="Position2D" parent="."]
+position = Vector2( 13.6913, 7.93698 )
+scale = Vector2( 0.6, 0.6 )
