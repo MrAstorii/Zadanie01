@@ -3,7 +3,9 @@
 [ext_resource path="res://Nabój 9mm.png" type="Texture" id=1]
 [ext_resource path="res://Nabój.gd" type="Script" id=2]
 
-[node name="Nabój" type="KinematicBody2D"]
+[node name="Nabój" type="KinematicBody2D" groups=[
+"Pociski",
+]]
 collision_layer = 8
 collision_mask = 10
 script = ExtResource( 2 )
