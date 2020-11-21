@@ -1,5 +1,6 @@
 extends KinematicBody2D
 
+signal hit
 
 const UP = Vector2(0, -1)
 const GRAVITY = 20
@@ -14,6 +15,7 @@ func _ready():
 
 func _physics_process(delta):
 	motion.y += GRAVITY
+	
 	
 	if Input.is_action_pressed("ui_right"):
 		motion.x = SPEED
@@ -41,3 +43,14 @@ func _process(delta):
 	position.x = clamp(position.x, 0, screen_size.x)
 	position.y = clamp(position.y, 0, screen_size.y)
 
+
+
+func _on_Area2D_body_entered(body):
+	hide()
+	emit_signal("hit")
+	$CollisionShape2D.set_deferred("disabled", true)
+	
+func start(pos):
+	position = pos
+	show()
+	$CollisionShape2D.disabled = false
