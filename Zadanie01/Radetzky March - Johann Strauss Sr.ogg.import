@@ -1,0 +1,15 @@
+[remap]
+
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/Radetzky March - Johann Strauss Sr.ogg-0a4518b0313e1b5488b284cb6679563b.oggstr"
+
+[deps]
+
+source_file="res://Radetzky March - Johann Strauss Sr.ogg"
+dest_files=[ "res://.import/Radetzky March - Johann Strauss Sr.ogg-0a4518b0313e1b5488b284cb6679563b.oggstr" ]
+
+[params]
+
+loop=true
+loop_offset=0
