@@ -39,6 +39,7 @@ func _on_MessageTimer_timeout():
 	$InfoLabel.hide()
 	$EndLabel.hide()
 	$Skip.hide()
+	
 
 
 func _on_StartButton_pressed():
