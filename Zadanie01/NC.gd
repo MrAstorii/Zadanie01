@@ -34,9 +34,9 @@ func _ready():
 	set_process(true)
 
 func _input(event):
-	if(event.is_action_pressed("ui_select")):
+	if(event.is_action_pressed("shoot")):
 		shooting = true
-	elif(event.is_action_pressed("ui_select")):
+	elif(event.is_action_pressed("shoot")):
 		shooting = false
 
 func _process(delta):
