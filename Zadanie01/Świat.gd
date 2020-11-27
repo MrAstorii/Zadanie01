@@ -2,6 +2,7 @@ extends Node
 
 var score
 
+
 func game_over():
 	$ScoreTimer.stop()
 	$HUD.show_game_over()
@@ -12,12 +13,11 @@ func game_over():
 func new_game():
 	$Open.stop()
 	score = 0
-	$FF.start($StartPosition.position)
 	$StartTimer.start()
 	$HUD.update_score(score)
 	$HUD.show_message()
 	$Muzyka.play()
-	
+	$FF.start($StartPosition.position)
 
 func _on_StartTimer_timeout():
 	$ScoreTimer.start()
@@ -26,4 +26,3 @@ func _on_StartTimer_timeout():
 
 func _on_ScoreTimer_timeout():
 	score += 1
-
